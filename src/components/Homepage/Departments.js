@@ -1,6 +1,7 @@
 // src/components/Departments.js
 import React from "react";
 
+
 const departments = [
   {
     title: "Education Department",
@@ -10,7 +11,8 @@ const departments = [
       "Teaching Products",
       "Empowerment Education",
       "Counselling & Guidance"
-    ]
+    ],
+    link:"./EducationDept"
   },
   {
     title: "Social Media Department",
@@ -19,7 +21,8 @@ const departments = [
       "Campaigns",
       "How to Utilize Social Platforms",
       "How to Utilize Government Benefits"
-    ]
+    ],
+    link:"./SocialDept"
   },
   {
     title: "Civic Department",
@@ -31,7 +34,8 @@ const departments = [
       "Public Welfare Service",
       "Health Service Care",
       "Social Justice & Empowerment"
-    ]
+    ],
+    link:"./CivicDept"
   }
 ];
 
@@ -52,12 +56,17 @@ export default function Departments() {
                       <li key={idx} className="mb-1">• {item}</li>
                     ))}
                   </ul>
+                  <a href={dept.link} rel="noopener noreferrer" 
+                    className="text-success mt-auto">
+                      Click to learn more
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      
     </section>
   );
 }
