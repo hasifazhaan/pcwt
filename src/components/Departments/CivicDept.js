@@ -4,13 +4,13 @@ import Footer from "../common/Footer";
 import '../../App.css';
 
 
-export default function About() {
+export default function CivicDept() {
     return (
         <>
         <Navbar/>
-        <section id="about" className="py-5 bg-white">
+        <section id="" className="py-5 bg-white">
             <div className="container">
-                <h2 className="text-success fw-bold mb-4"> Education Department</h2>
+                <h2 className="text-success fw-bold mb-4"> Civic Department</h2>
                 
                 <p className="lead">
                 CWT aims to bridge the gap between communities and essential services by fostering awareness and 

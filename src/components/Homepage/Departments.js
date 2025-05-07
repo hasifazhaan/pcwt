@@ -1,5 +1,6 @@
 // src/components/Departments.js
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const departments = [
@@ -12,7 +13,7 @@ const departments = [
       "Empowerment Education",
       "Counselling & Guidance"
     ],
-    link:"./EducationDept"
+    link:"/dept/education"
   },
   {
     title: "Social Media Department",
@@ -22,7 +23,7 @@ const departments = [
       "How to Utilize Social Platforms",
       "How to Utilize Government Benefits"
     ],
-    link:"./SocialDept"
+    link:"/dept/social"
   },
   {
     title: "Civic Department",
@@ -35,7 +36,7 @@ const departments = [
       "Health Service Care",
       "Social Justice & Empowerment"
     ],
-    link:"./CivicDept"
+    link:"/dept/civic"
   }
 ];
 
@@ -56,10 +57,10 @@ export default function Departments() {
                       <li key={idx} className="mb-1">• {item}</li>
                     ))}
                   </ul>
-                  <a href={dept.link} rel="noopener noreferrer" 
+                  <Link to={dept.link} rel="noopener noreferrer" 
                     className="text-success mt-auto">
                       Click to learn more
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

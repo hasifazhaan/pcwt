@@ -46,6 +46,9 @@ export default function Navbar() {
               <li className="nav-item">
                 <a className="nav-link" href="#updates">Updates</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/joinus">Join Us</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -11,7 +11,8 @@ const images = [
   "https://static.vecteezy.com/system/resources/thumbnails/054/359/384/small/thoughtful-young-boy-with-dark-skin-and-serious-expression-free-photo.jpg"
 ];
 
-export default function Gallery() {
+
+const Gallery = () => {
   return (
     <section id="gallery" className="py-5 bg-white">
       <div className="container text-center">
@@ -28,3 +29,7 @@ export default function Gallery() {
     </section>
   );
 }
+
+
+export default Gallery;
+export {images};
