@@ -3,9 +3,10 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-5 bg-light">
+    <section id="contact" className="py-5 " style={{ backgroundColor: "#e6ffea" }}>
       <div className="container">
-        <h2 className="text-success fw-bold text-center mb-4">Contact Us</h2>
+        <h2 className="text-success fw-bold text-center mb-2">Contact Us</h2>
+        <div className="section-underline" style={{ width: '150px'}}></div>
         <form className="row g-3">
           <div className="col-md-6">
             <label htmlFor="name" className="form-label">Name</label>

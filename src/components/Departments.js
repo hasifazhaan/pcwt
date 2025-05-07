@@ -37,9 +37,10 @@ const departments = [
 
 export default function Departments() {
   return (
-    <section id="departments" className="py-5 bg-white">
+    <section id="departments" className="py-5 " style={{ backgroundColor: "#e6ffea" }}>
       <div className="container text-center">
-        <h2 className="text-success fw-bold mb-4">Our Departments</h2>
+        <h2 className="text-success fw-bold mb-2">Our Fields Of Work </h2>
+        <div className="section-underline" style={{ width: '300px'}}></div>
         <div className="row">
           {departments.map((dept, index) => (
             <div key={index} className="col-md-4 mb-4">
