@@ -1,12 +1,7 @@
-import React from 'react';
-import '../../AnimatedContentPage.css';
-import Image1 from '../../res/img/img2.jpg'; // replace with your image path
-import Image2 from '../../res/img/img6.jpg';
-import { useInView } from 'react-intersection-observer';
+// src/components/About.js
+import React from "react";
 
-export default function AnimatedContentPage() {
-  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: false });
-
+export default function About() {
   return (
     <>
     <section id="about" className="py-5 bg-white text-center">
@@ -24,51 +19,26 @@ export default function AnimatedContentPage() {
         bring meaningful change to the community.
         </p>
       </div>
-      </section>
-    
-    <div className="container-fluid py-5 bg-light">
-      <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
       <div className="container">
         <h2 className="text-success fw-bold mb-2">Our Mission</h2>
-        <div className="" style={{ width: '200px'}}></div>
+        <div className="section-underline" style={{ width: '200px'}}></div>
         <p className="lead">
         To uplift local communities through education, civic participation, 
         and empowerment programs that foster long-term growth and unity.
         </p>
       </div>
-        <div className="image-container me-md-4 mb-4 mb-md-0" ref={ref}>
-          <img
-            src={Image1}
-            alt="Community Engagement"
-            className={`img-fluid animated-image ${inView ? 'zoom-in' : ''}`}
-          />
-        </div>
-      </div>
-    </div>
-
-    <div className="container-fluid py-5 bg-light">
-      <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
-      <div className="image-container me-md-4 mb-4 mb-md-0" ref={ref}>
-          <img
-            src={Image2}
-            alt="Community Engagement"
-            className={`img-fluid animated-image ${inView ? 'zoom-in' : ''}`}
-          />
-        </div>
       <div className="container">
-        <h2 className="text-success fw-bold ">Vision</h2>
-        <div className="" style={{ width: '200px'}}></div>
+        <h2 className="text-success fw-bold mb-2">Vision</h2>
+        <div className="section-underline" style={{ width: '200px'}}></div>
         <p className="lead">
         We envision a community where every individual is educated, aware of their rights, and actively engaged in improving their lives and 
         surroundings—building a stronger, united, and self-sustaining society for generations to come.
         </p>
       </div>
 
-      </div>
-    </div>
 
-    
+    </section>
 
     </>
   );
-}  
+}

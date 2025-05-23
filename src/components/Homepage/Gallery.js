@@ -1,16 +1,17 @@
 // src/components/Gallery.js
 import React from "react";
+import Img1 from '../../res/img/img1.jpg'
+import Img2 from '../../res/img/img2.jpg'
+import Img3 from '../../res/img/img3.jpg'
+import Img4 from '../../res/img/img4.jpg'
+import Img5 from '../../res/img/img5.jpg'
+import Img6 from '../../res/img/img6.jpg'
+import Img7 from '../../res/img/img7.jpg'
+import Img8 from '../../res/img/img8.jpg'
+import Img9 from '../../res/img/img9.jpg'
 
-const images = [
-  "https://media.istockphoto.com/id/535555239/photo/happy-indian-school-children.jpg?s=612x612&w=0&k=20&c=fcpTUHiHJuaeRS-xHJy4oOflwKpBooiPecyewzohvhk=",
-  "https://media.istockphoto.com/id/1166479876/photo/group-of-happy-gypsy-indian-children-desert-village-india.jpg?s=612x612&w=is&k=20&c=x80foAmr9XlOjxIbXVWz0sveCIyYw3JR07jGtM2JVAQ=",
-  "https://static.vecteezy.com/system/resources/thumbnails/054/359/384/small/thoughtful-young-boy-with-dark-skin-and-serious-expression-free-photo.jpg",
-  "https://static.vecteezy.com/system/resources/thumbnails/050/357/844/small_2x/a-group-of-children-playing-together-one-child-standing-on-the-outskirts-with-a-look-of-longing-and-isolation-on-their-face-photo.jpg",
-  "https://media.istockphoto.com/id/535555239/photo/happy-indian-school-children.jpg?s=612x612&w=0&k=20&c=fcpTUHiHJuaeRS-xHJy4oOflwKpBooiPecyewzohvhk=",
-  "https://media.istockphoto.com/id/1166479876/photo/group-of-happy-gypsy-indian-children-desert-village-india.jpg?s=612x612&w=is&k=20&c=x80foAmr9XlOjxIbXVWz0sveCIyYw3JR07jGtM2JVAQ=",
-  "https://static.vecteezy.com/system/resources/thumbnails/054/359/384/small/thoughtful-young-boy-with-dark-skin-and-serious-expression-free-photo.jpg"
-];
 
+const images = [Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9];
 
 const Gallery = () => {
   return (

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const departments = [
   {
-    title: "Education Department",
+    title: "Education",
     items: [
       "Scholarship",
       "Crash Course: Maths, English, Kannada, Hindi, Social, Science, Computer Science",
@@ -16,7 +16,7 @@ const departments = [
     link:"/dept/education"
   },
   {
-    title: "Social Media Department",
+    title: "Social Media Awareness",
     items: [
       "Awareness through Social Media",
       "Campaigns",
@@ -26,7 +26,7 @@ const departments = [
     link:"/dept/social"
   },
   {
-    title: "Civic Department",
+    title: "Civic Engagement",
     items: [
       "Sanitation",
       "BESCOM",
@@ -37,6 +37,18 @@ const departments = [
       "Social Justice & Empowerment"
     ],
     link:"/dept/civic"
+  },
+  {
+    title: "Health & Fitness",
+    items: [
+      "Public Health",
+      "Medical camps",
+      "Fitness",
+      "Yoga",
+      "Sanitation",
+      
+    ],
+    link:"/dept/health"
   }
 ];
 

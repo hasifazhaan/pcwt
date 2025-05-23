@@ -15,6 +15,7 @@ export default function Routess() {
       <Router>
         <Routes>
             <Route path='/' element={<HomePage/>} />
+            <Route path='/pcwt' element={<HomePage/>} />
             <Route path='/dept/education' element={<EducationDept/>} />
             <Route path='/dept/social' element={<SocialDept/>} />
             <Route path='/dept/civic' element={<CivicDept/>} />

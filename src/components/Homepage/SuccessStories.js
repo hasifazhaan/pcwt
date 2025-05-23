@@ -2,40 +2,42 @@ import React from 'react';
 
 const stories = [
   {
-    title: 'Empowering First-Time Voters',
+    title: 'Career Guidance Program',
     description:
-      'We organinsed Electoral campaign for voter registration drives and awareness campaigns, enabling over 150 students and villagers to register and understand the importance of voting.',
+      'PCWT Trust, in collaboration with the Masjid-e-Al-Quba leadership, launched a career guidance program aimed at helping students understand the importance of making informed career choices. The program provided insights into various career paths, guiding students on how to identify their passions, strengths, and potential opportunities',
+    source: 'JAAGO Foundation',
+    link: 'https://en.wikipedia.org/wiki/JAAGO_Foundation',
+  },
+
+  {
+    title: 'Handwriting and Memory Skills Workshop',
+    description:
+      'In a powerful workshop held at Eidgah-e-Jadeed, Tannery Road, PCWT Trust, under the guidance of Asif Hazrath and his dedicated team, conducted an educational session on handwriting and memory-building skills. Initially, there were concerns that the turnout might not be high, but the reality exceeded all expectations. Over 2,000+ people',
     source: '',
     link: '#',
   },
   {
-    title: 'Guiding Students to Scholarships',
+    title: 'Voter ID Card and Aadhar Card Updation',
     description:
-      'The Foundation for Excellence has awarded over 81,590 scholarships to academically gifted students from low-income families across India, helping them pursue higher education in engineering, medicine, and law.',
-    source: 'Foundation For Excellence',
+      'n a bid to engage students and spark creativity, PCWT Trust organized an essay writing competition on the topic of Seerah-e-Nabi (Life of the Prophet), '
+      ,source: 'Foundation For Excellence',
     link: 'https://en.wikipedia.org/wiki/Foundation_For_Excellence',
   },
   {
-    title: 'Free Coaching for Underprivileged Students',
+    title: 'Essay Writing Competition – Seerah-e-Nabi (Life of the Prophet)',
     description:
       'Mommel Raju’s initiative in Kadapa district has provided free coaching to over 3,000 underprivileged students, helping them secure admissions into prestigious educational institutions through entrance exams.',
     source: 'The New Indian Express',
     link: 'https://www.newindianexpress.com/good-news/2024/Apr/28/kadapa-mans-free-coaching-centre-helps-underprivileged-realise-goals',
   },
   {
-    title: 'Career Counseling for Rural Students',
+    title: 'Crash Course for 8th, 9th, and 10th Grade Students',
     description:
-      'India Literacy Project’s career counseling sessions and scholarships have enabled students like Chandana to pursue engineering, with Chandana securing a seat in IIT Madras.',
-    source: 'India Literacy Project',
+      'PCWT Trust initiated a crash course for students in grades 8th, 9th, and 10th, with a strong focus on building a solid foundation in Mathematics and Kannada. ',
+      source: 'India Literacy Project',
     link: 'https://www.ilpnet.org/success-stories-that-inspire/',
   },
-  {
-    title: 'Digital Education in Remote Areas',
-    description:
-      'JAAGO Foundation’s Digital School project uses video conferencing to provide quality education to students in remote parts of Bangladesh, ensuring continuity in learning even during the COVID-19 pandemic.',
-    source: 'JAAGO Foundation',
-    link: 'https://en.wikipedia.org/wiki/JAAGO_Foundation',
-  },
+  
   {
     title: 'Free Coaching for Tribal Students',
     description:
@@ -63,7 +65,7 @@ const SuccessStories = () => {
                   rel="noopener noreferrer"
                   className="btn btn-outline-success mt-auto"
                 >
-                  Read more  {story.source}
+                  Read more  
                 </a>
               </div>
             </div>

@@ -8,8 +8,8 @@ export default function Navbar() {
       {/* Top info bar */}
       <div className="bg-success text-white py-1 small">
         <div className="container d-flex justify-content-between align-items-center">
-          <span>Email: pcwt@example.org</span>
-          <span>Phone: +91 98765 43210</span>
+          <span>Email:Pulikeshinagarcitizenswelfaretrust@gmail.com</span>
+          <span>Phone: +91 7337709927</span>
         </div>
       </div>
 
