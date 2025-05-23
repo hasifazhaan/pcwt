@@ -6,10 +6,10 @@ export default function Navbar() {
   return (
     <header>
       {/* Top info bar */}
-      <div className="bg-success text-white py-1 small">
+      <div className="bg-success text-white py-1 small overflow-hidden hide-on-mobile">
         <div className="container d-flex justify-content-between align-items-center">
-          <span>Email:Pulikeshinagarcitizenswelfaretrust@gmail.com</span>
-          <span>Phone: +91 7337709927</span>
+          <span >Pulikeshinagarcitizenswelfaretrust@gmail.com</span>
+          <span>+91 7337709927</span>
         </div>
       </div>
 
