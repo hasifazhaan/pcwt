@@ -1,0 +1,5 @@
+<ul className="list-unstyled text-start">
+                    {dept.items.map((item, idx) => (
+                      <li key={idx} className="mb-1">• {item}</li>
+                    ))}
+                  </ul>

@@ -1,23 +1,24 @@
 // src/components/Navbar.js
 import React from "react";
-import logo from '../../res/PCWT.jpg'
+import logo1 from '../../res/PCWT-removebg.png'
 
-export default function Navbar() {
+export default function Navbar({Logo}) {
+ 
   return (
     <header>
       {/* Top info bar */}
-      <div className="bg-success text-white py-1 small overflow-hidden hide-on-mobile">
+      {/* <div className="bg-success text-white py-1 small overflow-hidden hide-on-mobile">
         <div className="container d-flex justify-content-between align-items-center">
           <span >Pulikeshinagarcitizenswelfaretrust@gmail.com</span>
-          <span>+91 7337709927</span>
+          <span >Phone No: +91 7337709927</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Sticky main navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top border-bottom">
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand text-success fw-bold" href="#home">
-            <img src={logo} alt="" width={50} height={50} className="logo"/>
+          <a className="navbar-brand text-success fw-bold" href="/#home">
+            <img src={Logo?.image_url || logo1 } alt="" width={80} height={80} className="logo"/>
           
           </a>
           <button
@@ -33,21 +34,21 @@ export default function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto ">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <a className="nav-link text-white" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link text-white" href="/#about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#departments">Departments</a>
+                <a className="nav-link text-white" href="/#departments">Departments</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#updates">Updates</a>
+                <a className="nav-link text-white" href="/#updates">Updates</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/joinus">Join Us</a>
+                <a className="nav-link text-white" href="/joinus">Join Us</a>
               </li>
             </ul>
           </div>

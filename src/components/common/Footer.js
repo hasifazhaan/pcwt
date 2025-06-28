@@ -16,9 +16,9 @@ export default function Footer() {
           {/* Address */}
           <div className="col-md-4 mb-4">
             <h5 className="fw-bold">Contact Us</h5>
-            <p>Pulekeshi Nagar, Bengaluru - 560005</p>
-            <p><FaPhone className="me-2" /> +91-9876543210</p>
-            <p><FaEnvelope className="me-2" /> info@pcwt.org</p>
+            <p>Al Quba Masjid, Shampur main road, Coffee board Colony Pulekeshi Nagar, Bengaluru - 5600045</p>
+            <p><FaPhone className="me-2" /> +91-7337709927</p>
+            <p><FaEnvelope className="me-2" /> Pulikeshinagarcitizenswelfaretrust@gmail.com</p>
           </div>
 
           {/* Social Media */}
@@ -28,7 +28,7 @@ export default function Footer() {
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
                 <FaFacebookF />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <a href="https://www.instagram.com/pcwt_official?igsh=MWQweTRhZGlpNHc4YQ==" target="_blank" rel="noopener noreferrer" className="text-white">
                 <FaInstagram />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white">

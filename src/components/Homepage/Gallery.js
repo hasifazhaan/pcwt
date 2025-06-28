@@ -17,12 +17,12 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-5 bg-white">
       <div className="container text-center">
-        <h2 className="text-success fw-bold mb-2">Gallery</h2>
+        <h2 className="text-success fw-bold mb-2">Crew In Action</h2>
         <div className="section-underline" style={{ width: '100px'}}></div>
         <div className="row">
           {images.map((src, index) => (
             <div className="col-md-4 mb-4" key={index}>
-              <img src={src}  height='100px' width= '500px' className="img-fluid rounded shadow-sm" alt={`Gallery ${index + 1}`} />
+              <img src={src}  height='100px' width= '500px' className="img-fluid rounded shadow-sm" alt={`Gallery ${index + 1}`} data-aos="zoom-in" data-aos-duration="2000" />
             </div>
           ))}
         </div>

@@ -1,11 +1,25 @@
 // src/components/Departments.js
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import { Link } from "react-router-dom";
+import "../../card.css"
+import { GiSpellBook } from "react-icons/gi";
+import { FaPeopleLine } from "react-icons/fa6";
+import { FaHandsHelping } from "react-icons/fa";
+import { IoFitnessSharp } from "react-icons/io5";
+import axios from 'axios';
 
 
+const deptlogo = {
+  "education" : <GiSpellBook style={{ fontSize: "100px" }}/>,
+  "social" : <FaPeopleLine style={{ fontSize: "100px" }} />,
+  "civic" : <FaHandsHelping style={{ fontSize: "100px" }} />,
+  "health" : <IoFitnessSharp  style={{ fontSize: "100px" }} />
+}
 const departments = [
   {
-    title: "Education",
+    heading: "Education Department",
+    department_name:"education",
+    logo:<GiSpellBook style={{ fontSize: "100px" }}/>,
     items: [
       "Scholarship",
       "Crash Course: Maths, English, Kannada, Hindi, Social, Science, Computer Science",
@@ -16,7 +30,9 @@ const departments = [
     link:"/dept/education"
   },
   {
-    title: "Social Media Awareness",
+    heading: "Social Media Awareness",
+    department_name:"social",
+    logo:<FaPeopleLine style={{ fontSize: "100px" }} />,
     items: [
       "Awareness through Social Media",
       "Campaigns",
@@ -26,7 +42,9 @@ const departments = [
     link:"/dept/social"
   },
   {
-    title: "Civic Engagement",
+    heading: "Civic Engagement",
+    department_name:"civic",
+    logo:<FaHandsHelping style={{ fontSize: "100px" }} />,
     items: [
       "Sanitation",
       "BESCOM",
@@ -39,42 +57,74 @@ const departments = [
     link:"/dept/civic"
   },
   {
-    title: "Health & Fitness",
-    items: [
-      "Public Health",
-      "Medical camps",
-      "Fitness",
-      "Yoga",
-      "Sanitation",
-      
-    ],
+    heading: "Health & Fitness",
+    department_name:"health",
+    logo:<IoFitnessSharp  style={{ fontSize: "100px" }} />,
+    items:'Public Health,Medical camps,Fitness,Yoga",Sanitation',
     link:"/dept/health"
   }
+  
 ];
 
 export default function Departments() {
+  const [department, setDepartment] = useState([])
+
+  const fetchDepartment = async () => {
+    try {
+      const res = await axios.get(`http://localhost:3001/department-sections`);
+      const data = res.data;
+      setDepartment(data);
+    } catch (err) {
+      console.error('Error fetching departments:', err);
+      // fallback to static data
+      setDepartment(departments); // or [] to show nothing
+    }
+  };
+  
+
+  useEffect(() => {
+    fetchDepartment();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
   return (
+    // e6ffea
     <section id="departments" className="py-5 " style={{ backgroundColor: "#e6ffea" }}>
       <div className="container text-center">
         <h2 className="text-success fw-bold mb-2">Our Fields Of Work </h2>
         <div className="section-underline" style={{ width: '300px'}}></div>
         <div className="row">
-          {departments.map((dept, index) => (
-            <div key={index} className="col-md-4 mb-4">
-              <div className="card h-100 border-success">
+          {department.map((dept, index) => (
+            <div key={index} className="col-md-4 mb-4  " data-aos= {`${index % 2?'fade-up':'fade-up'}`} data-aos-duration="10000">
+              <Link to={`/dept/${dept.department_name}`} rel="noopener noreferrer" className="cardm" style={{textDecoration:"none"}}>
+              
+              
+              <div className="card e-card playing" >
+                
                 <div className="card-body">
-                  <h5 className="card-title text-success fw-bold">{dept.title}</h5>
-                  <ul className="list-unstyled text-start">
-                    {dept.items.map((item, idx) => (
-                      <li key={idx} className="mb-1">• {item}</li>
-                    ))}
-                  </ul>
-                  <Link to={dept.link} rel="noopener noreferrer" 
-                    className="text-success mt-auto">
+                <div className="image" />
+                <div className="wave" style={{animationDelay:`${Math.floor(Math.random() * (35 - 100 ) + 35)}ms`}}/>
+                <div className="wave" style={{animationDelay:`${Math.floor(Math.random() * (35 - 100 ) + 35)}ms`}}/>
+                <div className="wave" style={{animationDelay:`${Math.floor(Math.random() * (35 - 100 ) + 35)}ms`}}/>
+                <div className="infotop">
+                {/* <GiSpellBook style={{ fontSize: "100px" }}/> */}
+                {deptlogo[dept.department_name]}
+                <br/>
+                  <h5 className="card-title text-white fw-bold text-capitalize">{dept.heading}</h5>
+                  <br/>
+                  <div className="name">
+                    {/* {dept.items} */}
+                  {/* <Link to={dept.link} rel="noopener noreferrer"  
+                    className="text-white mt-auto" style={{textDecoration:"none", fontSize:"20px"}}> */}
                       Click to learn more
-                  </Link>
+                  {/* </Link> */}
+                  </div>
                 </div>
               </div>
+            </div>
+            </Link>
+              
             </div>
           ))}
         </div>

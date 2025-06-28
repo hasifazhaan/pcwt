@@ -1,51 +1,33 @@
 import React from 'react';
 
-const stories = [
+const stories =
+[
   {
-    title: 'Career Guidance Program',
-    description:
-      'PCWT Trust, in collaboration with the Masjid-e-Al-Quba leadership, launched a career guidance program aimed at helping students understand the importance of making informed career choices. The program provided insights into various career paths, guiding students on how to identify their passions, strengths, and potential opportunities',
-    source: 'JAAGO Foundation',
-    link: 'https://en.wikipedia.org/wiki/JAAGO_Foundation',
-  },
-
-  {
-    title: 'Handwriting and Memory Skills Workshop',
-    description:
-      'In a powerful workshop held at Eidgah-e-Jadeed, Tannery Road, PCWT Trust, under the guidance of Asif Hazrath and his dedicated team, conducted an educational session on handwriting and memory-building skills. Initially, there were concerns that the turnout might not be high, but the reality exceeded all expectations. Over 2,000+ people',
-    source: '',
-    link: '#',
+    "title": "Career Guidance Program",
+    "description": "PCWT Trust, in collaboration with the Masjid-e-Al-Quba leadership, launched a career guidance program to help students from SSLC and 9th grade make informed career choices. Over 120 students attended, with 30+ receiving one-on-one mentorship. 85% reported improved clarity on their post-SSLC goals.",
+    "link": "https://pcwt.org/career-guidance-program"
   },
   {
-    title: 'Voter ID Card and Aadhar Card Updation',
-    description:
-      'n a bid to engage students and spark creativity, PCWT Trust organized an essay writing competition on the topic of Seerah-e-Nabi (Life of the Prophet), '
-      ,source: 'Foundation For Excellence',
-    link: 'https://en.wikipedia.org/wiki/Foundation_For_Excellence',
+    "title": "Handwriting & Memory Skills Workshop",
+    "description": "Held at Eidgah-e-Jadeed, this workshop drew over 2,000 attendees, including students, teachers, and parents. It focused on improving handwriting, memory retention, and concentration. More than 500 students showed measurable improvement, and educators began replicating the techniques in classrooms.",
+    "link": "https://pcwt.org/handwriting-memory-workshop"
   },
   {
-    title: 'Essay Writing Competition – Seerah-e-Nabi (Life of the Prophet)',
-    description:
-      'Mommel Raju’s initiative in Kadapa district has provided free coaching to over 3,000 underprivileged students, helping them secure admissions into prestigious educational institutions through entrance exams.',
-    source: 'The New Indian Express',
-    link: 'https://www.newindianexpress.com/good-news/2024/Apr/28/kadapa-mans-free-coaching-centre-helps-underprivileged-realise-goals',
+    "title": "Voter ID & Aadhaar Registration Camp",
+    "description": "On March 16–17, PCWT hosted a registration camp helping 50–70 residents register or update their Aadhaar and Voter ID cards. The drive enabled 40+ first-time voters and provided much-needed assistance to senior citizens and daily-wage earners.",
+    "link": "https://pcwt.org/voter-aadhaar-camp"
   },
   {
-    title: 'Crash Course for 8th, 9th, and 10th Grade Students',
-    description:
-      'PCWT Trust initiated a crash course for students in grades 8th, 9th, and 10th, with a strong focus on building a solid foundation in Mathematics and Kannada. ',
-      source: 'India Literacy Project',
-    link: 'https://www.ilpnet.org/success-stories-that-inspire/',
+    "title": "Essay Writing Competition – Seerah-e-Nabi",
+    "description": "Held at Loretta English School, this tri-lingual essay competition engaged 200+ students in exploring the life of Prophet Muhammad ﷺ. The top 20 students were awarded, and participants showed growth in writing, thinking, and expression skills.",
+    "link": "https://pcwt.org/seerah-nabi-essay-competition"
   },
-  
   {
-    title: 'Free Coaching for Tribal Students',
-    description:
-      'The Government of Jharkhand offers free coaching for competitive exams to tribal students, aiming to create equal opportunities for success in public service roles.',
-    source: 'EdexLive',
-    link: 'https://www.edexlive.com/news/2024/Sep/27/free-education-is-a-true-blessing-student-benefitting-from-jharkhands-free-coaching-initiative',
-  },
-];
+    "title": "Crash Course for 8th, 9th & 10th Students",
+    "description": "PCWT's academic crash course supported 300+ students in Math, Science, and Kannada. 92% passed their exams successfully. Through mock tests, structured notes, and expert doubt-clearing sessions, students gained confidence and exam readiness.",
+    "link": "https://pcwt.org/crash-course-board-prep"
+  }
+]
 
 const SuccessStories = () => {
   return (
@@ -54,19 +36,19 @@ const SuccessStories = () => {
       <div className="section-underline" style={{ width: '200px'}}></div>
       <div className="row g-4">
         {stories.map((story, index) => (
-          <div className="col-md-6 col-lg-4" key={index}>
+          <div className="col-md-6 col-lg-4" key={index} data-aos= {`${index % 2?'fade-zoom-in':'fade-zoom-out'}`} data-aos-duration="3000">
             <div className="card h-100 shadow-sm">
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title text-success">{story.title}</h5>
                 <p className="card-text flex-grow-1">{story.description}</p>
-                <a
+                {/* <a
                   href={story.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-success mt-auto"
                 >
                   Read more  
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

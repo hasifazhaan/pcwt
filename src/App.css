@@ -1,9 +1,87 @@
+/* home screen styles */
+
+.header1{
+  background-size :'cover';
+  background-position: 'center';
+  height: 100vh;
+  width: 99vw;
+}
+.shaded{
+  text-shadow: 5px 5px #45444457;
+}
+
+/* about section */
+
+
+
+
+.edu-dept-head{
+  position: relative;
+  height: 90vh;
+  width: 99vw;
+}
+
+.edu-dept-head > .container{
+    /* From https://css.glass */
+    position: relative;
+    top:20%;
+    background: rgba(209, 170, 170, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(10, 10, 10, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+
+}
+.edu-txt {
+  font-size:100px;
+  text-shadow: 5px 5px #74727225;
+}
+
+
+.edu-block{
+  padding: 5%;
+  background-color: #c7f9cf;
+}
+.edu-block:nth-child(odd){
+  background-color: #498d54;
+  color: white;
+}
+
+
+.logo{
+  mix-blend-mode:difference;
+}
+
+.ScrollDown{
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  left: 47%;
+  bottom: 30px;
+  color: white;
+  opacity: .6;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 35px;
+  }
+}
+
+
+
+
+
 .section-underline {
-  width: 100px;
+  width: 50px;
   height: 4px;
-  background-color: #2ecc71; /* Emerald Green */
+  background-color: #013918; /* Emerald Green */
   border-radius: 2px;
   margin: 0 auto 1.5rem auto;
+  position: relative;
 }
 
 .join-img{
@@ -13,7 +91,27 @@
 
 
 @media (max-width: 767.98px) {
+  #navbarNav{
+    background-color: #176538;
+    z-index: 999;
+    padding: 30px;
+    font-size: 20px;
+
+  }
+  .navbar > .container >  button{
+    border: 2px solid black;
+  }
   .hide-on-mobile {
     display: none !important;
+  }
+  .edu-txt {
+    font-size:60px;
+    text-shadow: 5px 5px #74727225;
+  }
+  .header1{
+    background-size :'cover';
+    background-position: 'center';
+    height: 60vh;
+    width: 99vw;
   }
 }
