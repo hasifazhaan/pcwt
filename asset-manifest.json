@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/pcwt/static/css/main.fb9534ff.css",
-    "main.js": "/pcwt/static/js/main.e7e5fe0a.js",
+    "main.css": "/pcwt/static/css/main.c4a8ba01.css",
+    "main.js": "/pcwt/static/js/main.f4a393e1.js",
     "static/js/453.faadde54.chunk.js": "/pcwt/static/js/453.faadde54.chunk.js",
     "static/media/img6.jpg": "/pcwt/static/media/img6.9f9429babb97c0c39e31.jpg",
-    "static/media/PCWT.jpg": "/pcwt/static/media/PCWT.02072acd4e7077ea236d.jpg",
+    "static/media/education-bg.jpg": "/pcwt/static/media/education-bg.eb7ebb837e6090373fa0.jpg",
     "static/media/img1.jpg": "/pcwt/static/media/img1.ce44886bed68bfbe3ff5.jpg",
     "static/media/img9.jpg": "/pcwt/static/media/img9.dd4458862285cb6d32d3.jpg",
     "static/media/img8.jpg": "/pcwt/static/media/img8.3f60ebca65be535565b9.jpg",
     "static/media/img4.jpg": "/pcwt/static/media/img4.edc758c7c8593d62f4a5.jpg",
+    "static/media/PCWT-removebg.png": "/pcwt/static/media/PCWT-removebg.eba26817fe10008a26b0.png",
     "static/media/img5.jpg": "/pcwt/static/media/img5.4a244f1b603a9c1e600d.jpg",
     "static/media/img7.jpg": "/pcwt/static/media/img7.eaa89e2aeb26fdfd71a3.jpg",
     "static/media/img3.jpg": "/pcwt/static/media/img3.7923c948378e0a149bb9.jpg",
@@ -17,12 +18,12 @@
     "static/media/revicons.ttf": "/pcwt/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/pcwt/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/pcwt/index.html",
-    "main.fb9534ff.css.map": "/pcwt/static/css/main.fb9534ff.css.map",
-    "main.e7e5fe0a.js.map": "/pcwt/static/js/main.e7e5fe0a.js.map",
+    "main.c4a8ba01.css.map": "/pcwt/static/css/main.c4a8ba01.css.map",
+    "main.f4a393e1.js.map": "/pcwt/static/js/main.f4a393e1.js.map",
     "453.faadde54.chunk.js.map": "/pcwt/static/js/453.faadde54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb9534ff.css",
-    "static/js/main.e7e5fe0a.js"
+    "static/css/main.c4a8ba01.css",
+    "static/js/main.f4a393e1.js"
   ]
 }
