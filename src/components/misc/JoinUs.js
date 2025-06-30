@@ -43,7 +43,10 @@ export default function EducationDept() {
               <strong>Code of Conduct:</strong> Zero tolerance for unethical behavior.
             </li>
             <li className="list-group-item">
-            You can contact us via email at <strong>Pulkeshinagarcitizenswelfaretrust@gmail.com</strong><br/> or reach us by phone at <strong>+91 7337709927</strong>.
+            Contact us at: 
+              <a href="mailto:Pulkeshinagarcitizenswelfaretrust@gmail.com" className="text-break">
+                Email
+              </a><br/> or reach us by phone at <strong>+91 7337709927</strong>.
             </li>
           </ul>
 

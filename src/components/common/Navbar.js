@@ -45,6 +45,20 @@ export default function Navbar() {
     { id: "joinus", label: "Join Us", href: "/joinus" },
   ];
 
+  const closeNavbar = () => {
+    // Only collapse on mobile (Bootstrap breakpoint: lg < 992px)
+    if (window.innerWidth < 992) {
+      const navbar = document.getElementById("navbarNav");
+      if (navbar && navbar.classList.contains("show")) {
+        const bsCollapse = new window.bootstrap.Collapse(navbar, {
+          toggle: false
+        });
+        bsCollapse.hide();
+      }
+    }
+  };
+  
+
   return (
     <header>
       <nav className={`navbar navbar-expand-lg fixed-top navbar-dark ${scrolled ? 'navbar-success bg-success shadow' : 'navbar-glass'}`}>
@@ -76,7 +90,8 @@ export default function Navbar() {
                 <li className="nav-item" key={link.id}>
                   <a
                     className={`nav-link ${activeSection === link.id ? "active fw-bold" : ""}`}
-                    href={link.href}
+                    href={link.href} 
+                    onClick={closeNavbar} 
                   >
                     {link.label}
                   </a>
