@@ -3,6 +3,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+
 const updates = [
   {
     title: "Scholarship Program Launched",
@@ -46,6 +47,9 @@ const responsive = {
 };
 
 export default function Updates() {
+
+ 
+
   return (
     <section className="container-fluid py-5" id="updates" style={{ backgroundColor: "#e6ffea" }}>
       <h2 className="text-center mb-2 text-success fw-bold">Latest Updates</h2>
