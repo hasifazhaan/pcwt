@@ -4,12 +4,12 @@ const stories =
 [
   {
     "title": "Career Guidance Program",
-    "description": "PCWT Trust, in collaboration with the Masjid-e-Al-Quba leadership, launched a career guidance program to help students from SSLC and 9th grade make informed career choices. Over 120 students attended, with 30+ receiving one-on-one mentorship. 85% reported improved clarity on their post-SSLC goals.",
+    "description": "PCWT Trust, in collaboration with the Masjid-e-Al-Quba leadership, launched a career guidance program to help students from SSLC and 9th grade make informed career choices. Over 20 students attended, with 20+ receiving one-on-one mentorship. 85% reported improved clarity on their post-SSLC goals.",
     "link": "https://pcwt.org/career-guidance-program"
   },
   {
     "title": "Handwriting & Memory Skills Workshop",
-    "description": "Held at Eidgah-e-Jadeed, this workshop drew over 2,000 attendees, including students, teachers, and parents. It focused on improving handwriting, memory retention, and concentration. More than 500 students showed measurable improvement, and educators began replicating the techniques in classrooms.",
+    "description": "Held at Eidgah-e-Jadeed, this workshop drew over 1,000 attendees, including students, teachers, and parents. It focused on improving handwriting, memory retention, and concentration. More than 200 students showed measurable improvement, and educators began replicating the techniques in classrooms.",
     "link": "https://pcwt.org/handwriting-memory-workshop"
   },
   {
@@ -19,12 +19,12 @@ const stories =
   },
   {
     "title": "Essay Writing Competition – Seerah-e-Nabi",
-    "description": "Held at Loretta English School, this tri-lingual essay competition engaged 200+ students in exploring the life of Prophet Muhammad ﷺ. The top 20 students were awarded, and participants showed growth in writing, thinking, and expression skills.",
+    "description": "Held at Loretta English School, this tri-lingual essay competition engaged 50+ students in exploring the life of Prophet Muhammad ﷺ. The top 10 students were awarded, and participants showed growth in writing, thinking, and expression skills.",
     "link": "https://pcwt.org/seerah-nabi-essay-competition"
   },
   {
     "title": "Crash Course for 8th, 9th & 10th Students",
-    "description": "PCWT's academic crash course supported 300+ students in Math, Science, and Kannada. 92% passed their exams successfully. Through mock tests, structured notes, and expert doubt-clearing sessions, students gained confidence and exam readiness.",
+    "description": "PCWT's academic crash course supported 50+ students in Math, Science, and Kannada. 80% passed their exams successfully. Through mock tests, structured notes, and expert doubt-clearing sessions, students gained confidence and exam readiness.",
     "link": "https://pcwt.org/crash-course-board-prep"
   }
 ]

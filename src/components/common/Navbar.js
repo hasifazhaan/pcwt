@@ -1,25 +1,62 @@
-// src/components/Navbar.js
-import React from "react";
-import logo1 from '../../res/PCWT-removebg.png'
+import React, { useEffect, useState } from "react";
+import logo from '../../res/PCWT-removebg.png';
 
-export default function Navbar({Logo}) {
- 
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ["home", "about", "departments", "updates", "joinus"];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // 50% visible to be considered "in view"
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const navLinks = [
+    { id: "home", label: "Home", href: "/#home" },
+    { id: "about", label: "About", href: "/#about" },
+    { id: "updates", label: "Updates", href: "/#updates" },
+    { id: "departments", label: "Departments", href: "/#departments" },
+    { id: "joinus", label: "Join Us", href: "/joinus" },
+  ];
+
   return (
     <header>
-      {/* Top info bar */}
-      {/* <div className="bg-success text-white py-1 small overflow-hidden hide-on-mobile">
-        <div className="container d-flex justify-content-between align-items-center">
-          <span >Pulikeshinagarcitizenswelfaretrust@gmail.com</span>
-          <span >Phone No: +91 7337709927</span>
-        </div>
-      </div> */}
-
-      {/* Sticky main navbar */}
-      <nav className="navbar navbar-expand-lg">
+      <nav className={`navbar navbar-expand-lg fixed-top navbar-dark ${scrolled ? 'navbar-success bg-success shadow' : 'navbar-glass'}`}>
         <div className="container">
-          <a className="navbar-brand text-success fw-bold" href="/#home">
-            <img src={Logo?.image_url || logo1 } alt="" width={80} height={80} className="logo"/>
-          
+          <a className="navbar-brand" href="/#home">
+            <img
+              src={logo}
+              alt="Logo"
+              width={scrolled ? 40 : 80}
+              height={scrolled ? 40 : 80}
+              className="logo transition"
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -34,22 +71,17 @@ export default function Navbar({Logo}) {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto ">
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/#about">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/#departments">Departments</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/#updates">Updates</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="/joinus">Join Us</a>
-              </li>
+            <ul className="navbar-nav ms-auto">
+              {navLinks.map((link) => (
+                <li className="nav-item" key={link.id}>
+                  <a
+                    className={`nav-link ${activeSection === link.id ? "active fw-bold" : ""}`}
+                    href={link.href}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -57,3 +89,70 @@ export default function Navbar({Logo}) {
     </header>
   );
 }
+
+
+
+// // src/components/Navbar.js
+// import React, { useEffect, useState } from "react";
+// import logo from '../../res/PCWT-removebg.png';
+// // import logoDark from  '../../res/PCWT-removebg.png'; // fallback logo on scroll
+
+// export default function Navbar() {
+//   const [scrolled, setScrolled] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => setScrolled(window.scrollY > 50);
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <header>
+//       <nav className={`navbar navbar-expand-lg fixed-top navbar-dark  ${scrolled ? 'navbar-success bg-success shadow' : 'navbar-glass'}`}>
+//         <div className="container">
+//           <a className="navbar-brand" href="/#home">
+//             <img
+//               // src={scrolled ? logoDark : logoLight}
+//               src = {logo}
+//               alt="Logo"
+//               width={scrolled ? 40 : 80}
+//               height={scrolled ? 40 : 80}
+//               className="logo transition"
+//             />
+//           </a>
+//           <button
+//             className="navbar-toggler"
+//             type="button"
+//             data-bs-toggle="collapse"
+//             data-bs-target="#navbarNav"
+//             aria-controls="navbarNav"
+//             aria-expanded="false"
+//             aria-label="Toggle navigation"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+
+//           <div className="collapse navbar-collapse" id="navbarNav">
+//             <ul className="navbar-nav ms-auto">
+//               <li className="nav-item">
+//                 <a className="nav-link active" href="/">Home</a>
+//               </li>
+//               <li className="nav-item">
+//                 <a className="nav-link" href="/#about">About</a>
+//               </li>
+//               <li className="nav-item">
+//                 <a className="nav-link" href="/#departments">Departments</a>
+//               </li>
+//               <li className="nav-item">
+//                 <a className="nav-link" href="/#updates">Updates</a>
+//               </li>
+//               <li className="nav-item">
+//                 <a className="nav-link" href="/joinus">Join Us</a>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// }

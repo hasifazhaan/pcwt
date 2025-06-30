@@ -1,11 +1,10 @@
 // src/components/UpdatesSection.js
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import axios from "axios";
 
 
-const updates1 = [
+const updates = [
   {
     title: "Scholarship Program Launched",
     description: "Applications open for PCWT's scholarship initiative supporting underprivileged students."
@@ -49,21 +48,7 @@ const responsive = {
 
 export default function Updates() {
 
-  const [updates, setUpdates] = useState([]);
-
-useEffect(() => {
-  const fetchUpdates = async () => {
-    try {
-      const res = await axios.get("http://localhost:3001/updates/public");
-      setUpdates(res.data);
-    } catch (error) {
-      console.error("Error fetching updates:", error);
-      setUpdates(updates1);
-    }
-  };
-
-  fetchUpdates();
-}, []);
+ 
 
   return (
     <section className="container-fluid py-5" id="updates" style={{ backgroundColor: "#e6ffea" }}>

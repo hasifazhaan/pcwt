@@ -1,20 +1,12 @@
 // src/components/Departments.js
-import React, { useEffect, useState }  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../card.css"
 import { GiSpellBook } from "react-icons/gi";
 import { FaPeopleLine } from "react-icons/fa6";
 import { FaHandsHelping } from "react-icons/fa";
 import { IoFitnessSharp } from "react-icons/io5";
-import axios from 'axios';
 
-
-const deptlogo = {
-  "education" : <GiSpellBook style={{ fontSize: "100px" }}/>,
-  "social" : <FaPeopleLine style={{ fontSize: "100px" }} />,
-  "civic" : <FaHandsHelping style={{ fontSize: "100px" }} />,
-  "health" : <IoFitnessSharp  style={{ fontSize: "100px" }} />
-}
 const departments = [
   {
     heading: "Education Department",
@@ -67,27 +59,6 @@ const departments = [
 ];
 
 export default function Departments() {
-  const [department, setDepartment] = useState([])
-
-  const fetchDepartment = async () => {
-    try {
-      const res = await axios.get(`http://localhost:3001/department-sections`);
-      const data = res.data;
-      setDepartment(data);
-    } catch (err) {
-      console.error('Error fetching departments:', err);
-      // fallback to static data
-      setDepartment(departments); // or [] to show nothing
-    }
-  };
-  
-
-  useEffect(() => {
-    fetchDepartment();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-
   return (
     // e6ffea
     <section id="departments" className="py-5 " style={{ backgroundColor: "#e6ffea" }}>
@@ -95,7 +66,7 @@ export default function Departments() {
         <h2 className="text-success fw-bold mb-2">Our Fields Of Work </h2>
         <div className="section-underline" style={{ width: '300px'}}></div>
         <div className="row">
-          {department.map((dept, index) => (
+          {departments.map((dept, index) => (
             <div key={index} className="col-md-4 mb-4  " data-aos= {`${index % 2?'fade-up':'fade-up'}`} data-aos-duration="10000">
               <Link to={`/dept/${dept.department_name}`} rel="noopener noreferrer" className="cardm" style={{textDecoration:"none"}}>
               
@@ -109,16 +80,12 @@ export default function Departments() {
                 <div className="wave" style={{animationDelay:`${Math.floor(Math.random() * (35 - 100 ) + 35)}ms`}}/>
                 <div className="infotop">
                 {/* <GiSpellBook style={{ fontSize: "100px" }}/> */}
-                {deptlogo[dept.department_name]}
+                {dept.logo}
                 <br/>
                   <h5 className="card-title text-white fw-bold text-capitalize">{dept.heading}</h5>
                   <br/>
                   <div className="name">
-                    {/* {dept.items} */}
-                  {/* <Link to={dept.link} rel="noopener noreferrer"  
-                    className="text-white mt-auto" style={{textDecoration:"none", fontSize:"20px"}}> */}
                       Click to learn more
-                  {/* </Link> */}
                   </div>
                 </div>
               </div>
