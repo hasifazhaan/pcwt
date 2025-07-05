@@ -61,14 +61,14 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className={`navbar navbar-expand-lg fixed-top navbar-dark ${scrolled ? 'navbar-success bg-success shadow' : 'navbar-glass'}`}>
+      <nav className={`navbar navbar-expand-lg  fixed-top  ${scrolled ? '  navbar-light green1 shadow' : 'navbar-dark navbar-glass'}`}>
         <div className="container">
-          <a className="navbar-brand" href="/#home">
+          <a className="" href="/#home">
             <img
               src={logo}
               alt="Logo"
-              width={scrolled ? 40 : 80}
-              height={scrolled ? 40 : 80}
+              width={scrolled ? 70 : 80}
+              height={scrolled ? 70 : 80}
               className="logo transition"
             />
           </a>

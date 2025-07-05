@@ -8,6 +8,7 @@
   transition: all 0.3s ease-in-out;
   border-bottom: none;
 }
+
 .logo.transition {
   transition: all 0.3s ease-in-out;
 }
@@ -15,6 +16,9 @@
   font-weight: 500;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.green1{
+  background-color: #e6fcdd;
 }
 /* ************************************************************************************************************** */
 /* home screen styles */
